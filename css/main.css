@@ -89,6 +89,7 @@ textarea {
    html {
      box-sizing: border-box;
      font-size: 62.5%;
+     background-color: rgba(252, 251, 101, 0.25);
    }
 
    *, *::before, *::after {
@@ -151,39 +152,46 @@ textarea {
 
    /* header */
    .site-header {
-     background-image: url(../img/header.jpeg);
-     background-position: bottom;
+     background-color: rgba(145, 62, 240, 0.7);
+     /* background-color: #fdfc65; */
+     /* background-image: url(../img/family2.jpg); */
+     background-position: center center;
      background-repeat: no-repeat;
      background-size: cover;
-     height: 50vh;
+     height: 18rem;
    }
    .top-bar {
-      padding: 5rem 1rem;
-   }
-   @media(min-width:768px){
-      .top-bar {
-        display: flex;
-        justify-content: space-between;
-      }
+      display: flex;
+      justify-content: space-between;
+      padding-top: 2rem;
+      max-width: 90rem;
+      margin: 0 auto;
    }
 
    .logo img {
-     max-width: 30rem;
+     max-width: 13rem;
    }
 
+   .social-media{margin: auto 0;}
+
    .social-media ul {
-     /* margin: 0; */
-     padding: auto 0;
+      margin: 0;
+      padding: 0;
      text-align: center;
-     display: flex;
-     justify-content: center;
+     display: block;
      list-style: none;
+   }
+
+   @media(min-width:768px){
+         .social-media ul {
+            display: flex;
+         }
    }
 
    .social-media a {
      font-size: 3rem;
      padding: 0 2rem;
-     color: #ffffff;
+     color:  #421c6e;
    }
 
    /* main */
@@ -217,17 +225,20 @@ textarea {
       background-size: cover;
       background-position: center center;
       background-attachment: fixed;
-      /* -webkit-filter: brightness(.8); */
-      /* filter: brightness(.8); */
    }
 
-   .content-parallax{
+   .content-parallax-1,
+   .content-parallax-2{
       position: relative;
       height: auto;
    }
-   .content-parallax:before{
-      content: '';
-      background-image: url(../img/parallax.jpeg);
+   .content-parallax-1:before{
+      content: ' ';
+      background-image: url(../img/tejedora.jpg);
+   }
+   .content-parallax-2:before{
+      content: ' ';
+      background-image: url(../img/family.jpg);
    }
    .info-parallax {
       position: relative;
@@ -240,7 +251,7 @@ textarea {
 
    /* footer */
    .site-footer {
-     background: #261d1d;
+     background: rgba(145, 62, 240, 0.7);
    }
 
    .footer-container {
@@ -248,12 +259,11 @@ textarea {
      display: block;
      text-align: center;
    }
-   .site-footer h2 {
-      color: #ffffff
+   .site-footer{
+      color:  #421c6e;
    }
    .site-footer ul li {
       list-style: none;
-      color: #ffffff;
       font-size: 2.4rem;
    }
    .site-footer ul i {
@@ -261,9 +271,7 @@ textarea {
    }
    p.copyright {
      text-align: center;
-     font-weight: 300;
-     color: #ffffff;
-     font-family: 'Quicksand', Arial;
+     font-weight: 700;
      font-size: 1.6rem;
      margin-top: 5rem;
    }
